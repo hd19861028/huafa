@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>华发又一城</title>
+		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta http-equiv="Expires" content="0" />
+		<meta content='telephone=no' name='format-detection' />
+
+		<link rel="stylesheet" href="css/main.css" />
+
+	</head>
+
+	<body>
+		<img src="img/p0/weixinlogo.jpg" class="weixinlogo" />
+		<img src="img/p3/help3-font.png" style="width: 82.05%; position: absolute; top: 10%; left: 9%; z-index: 5;" />
+		<div class="float">
+			<span id="b1">
+				<img src="img/p0/home.jpg" class="bg" />
+			</span>
+			<span id="b2">
+				<img src="img/p1/help-bg.jpg" class="bg" />
+				<img src="img/p1/help-rain.png" class="bg" />
+				<img src="img/p1/help-girl.png" style="width: 26.67%; left: 4.83%; top: 43.9%;" />
+				<img src="img/p1/help-boy.png" style="width: 36.875%; right: 4.83%; top: 55.06%;" />
+			</span>
+			<span id="b3">
+				<img src="img/p2/help2-bg.jpg" class="bg" />
+				<img src="img/p2/help2-boy.png" style="width: 27.71%; left: 18.84%; top: 26.49%;"  />
+				<img src="img/p2/help2-girl.png" style="width: 54.42%; right: 4.83%; top: 53.06%;" />
+			</span>
+		</div>
+
+		<div class="clear"></div>
+
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script>
+			$(function() {
+				var width = Screen.ViewWidth();
+				var height = Screen.ViewHeight();
+				var animateTime = 300;
+				
+				var style = {
+					width: width,
+					height: height
+				}
+				$('.float span').css(style)
+				$('.float span .bg').css(style)
+				swiptLeft('b1', function() {
+					$('#b2').animate({
+						'margin-left': (0 - width) + 'px'
+					}, animateTime)
+				})
+				swiptLeft('b2', function() {
+					$('#b3').animate({
+						'margin-left': (0 - width) + 'px'
+					}, animateTime)
+				})
+			})
+		</script>
+	</body>
+
+</html>
