@@ -1,0 +1,33 @@
+{
+	"debug": true,
+	"cluster": false,
+	"weixin_port": 3000,
+	"upload_max_size": 500,
+	"ase_key": "65d460d57ddfd8865d17e652b6d530cc",
+	"website": {
+		"domain": "mindmanager.top",
+		"appid": "wx0ef7fc3c99666996",
+		"secret": "ad2bf19277ad5d3f343426229aa57eee ",
+		"site_token": "nDepFSF5TpkgvaxveGJh",
+		"openid_expire": 31536000000
+	},
+	"cache": {
+		"ip": "172.16.4.51",
+		"port": 6789,
+		"timeout": 3000,
+		"expire": 300,
+		"db_count": 5,
+		"db_count_add": 5,
+		"enable": false
+	},
+	"db": {
+		"host": "172.16.13.170",
+		"user": "root",
+		"password": "123456",
+		"database": "mtt_dev",
+		"port": 3306,
+		"connectTimeout": 2000,
+		"connectionLimit": 100,
+		"multipleStatements": true
+	}
+}
