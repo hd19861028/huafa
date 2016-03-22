@@ -1,6 +1,7 @@
 "use strict";
 
 var fi = require('common').fileinfo;
+var path = require('path');
 var json = require("./config");
 
 json.istest = false;
