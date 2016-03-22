@@ -2,15 +2,20 @@
 	e.preventDefault();
 });
 
-function swiptLeft(id, callback) {
+function swipt(id, callbackLeft, callbackRight) {
 	var ele = document.getElementById(id);
 	var x, lastX;
 	ele.ontouchstart = function(e) {
 		x = e.touches[0].clientX;
 	};
 	ele.ontouchend = function() {
-		if (x - lastX >= 50) {
-			callback();
+		if (x - lastX >= 30) {
+			callbackLeft();
+		}
+		//alert(lastX - x)
+		if (lastX - x >= 30) {
+			if(callbackRight)
+				callbackRight();
 		}
 	};
 	ele.ontouchmove = function(e) {

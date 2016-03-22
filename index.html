@@ -16,7 +16,7 @@
 
 	<body>
 		<img src="img/p0/weixinlogo.jpg" class="weixinlogo" />
-		<img src="img/p3/help3-font.png" style="width: 82.05%; position: absolute; top: 10%; left: 9%; z-index: 5;" />
+		<!--<img src="img/p3/help3-font.png" style="width: 82.05%; position: absolute; top: 10%; left: 9%; z-index: 5;" />-->
 		<div class="float">
 			<span id="b1">
 				<img src="img/p0/home.jpg" class="bg" />
@@ -32,6 +32,15 @@
 				<img src="img/p2/help2-boy.png" style="width: 27.71%; left: 18.84%; top: 26.49%;"  />
 				<img src="img/p2/help2-girl.png" style="width: 54.42%; right: 4.83%; top: 53.06%;" />
 			</span>
+			<span id="b4">
+				<img src="img/p3/help3-bg.jpg" class="bg" />
+				<img src="img/p3/p1.png" style="width: 21.04%; left: 6.04%; top: 57.29%;"  />
+				<img src="img/p3/s1.png" style="width: 35%; left: 0; top: 53%;"  />
+				<img src="img/p3/p2.png" style="width: 29.375%; left: 48.309%; top: 56.5476%;"  />
+				<img src="img/p3/s2.png" style="width: 34.79%; left: 48.309%; top: 52.08%;"  />
+				<img src="img/p3/p3.png" style="width: 13.54%; right: 2.41545%; top: 62.5%;"  />
+				<img src="img/p3/s3.png" style="width: 16.67%; right: 0; top: 58.631%;"  />
+			</span>
 		</div>
 
 		<div class="clear"></div>
@@ -43,21 +52,33 @@
 				var width = Screen.ViewWidth();
 				var height = Screen.ViewHeight();
 				var animateTime = 300;
-				
 				var style = {
 					width: width,
 					height: height
 				}
 				$('.float span').css(style)
 				$('.float span .bg').css(style)
-				swiptLeft('b1', function() {
+				swipt('b1', function() {
 					$('#b2').animate({
 						'margin-left': (0 - width) + 'px'
 					}, animateTime)
 				})
-				swiptLeft('b2', function() {
+				swipt('b2', function() {
 					$('#b3').animate({
+						'margin-left': "-" + width + 'px'
+					}, animateTime)
+				}, function() {
+					$('#b2').animate({
+						'margin-left': '0px'
+					}, animateTime)
+				})
+				swipt('b3', function() {
+					$('#b4').animate({
 						'margin-left': (0 - width) + 'px'
+					}, animateTime)
+				}, function() {
+					$('#b3').animate({
+						'margin-left': '0px'
 					}, animateTime)
 				})
 			})
