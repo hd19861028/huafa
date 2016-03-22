@@ -95,10 +95,12 @@
 						'margin-left': '0px'
 					}, animateTime)
 				})
-				$('#btn-share').click(function() {
+				$('#btn-share').click(function(e) {
+					e.stopPropagation();
 					$('.share').show()
 				})
-				$('.share').click(function() {
+				$('.share').click(function(e) {
+					e.stopPropagation();
 					$('.share').hide()
 				})
 			})
