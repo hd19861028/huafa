@@ -16,7 +16,6 @@
 
 	<body>
 		<img src="img/p0/weixinlogo.jpg" class="weixinlogo" />
-		<!--<img src="img/p3/help3-font.png" style="width: 82.05%; position: absolute; top: 10%; left: 9%; z-index: 5;" />-->
 		<div class="float">
 			<span id="b1">
 				<img src="img/p0/home.jpg" class="bg" />
@@ -34,13 +33,21 @@
 			</span>
 			<span id="b4">
 				<img src="img/p3/help3-bg.jpg" class="bg" />
+				<img src="img/p3/help3-font.png" style="width: 82.05%; top: 10%; left: 9%; " />
 				<img src="img/p3/p1.png" style="width: 21.04%; left: 6.04%; top: 57.29%;"  />
 				<img src="img/p3/s1.png" style="width: 35%; left: 0; top: 53%;"  />
 				<img src="img/p3/p2.png" style="width: 29.375%; left: 48.309%; top: 56.5476%;"  />
 				<img src="img/p3/s2.png" style="width: 34.79%; left: 48.309%; top: 52.08%;"  />
 				<img src="img/p3/p3.png" style="width: 13.54%; right: 2.41545%; top: 62.5%;"  />
 				<img src="img/p3/s3.png" style="width: 16.67%; right: 0; top: 58.631%;"  />
+				
+				<img src="img/p3/yaoqing.png" style="width: 30.21%; left: 11.72%; top: 89.82%;" id="btn-share"  />
+				<img src="img/p3/zailai.png" style="width: 30.21%; right: 11.72%; top: 89.82%;" />
 			</span>
+		</div>
+		
+		<div class="share">
+			<img src="img/share.png" />
 		</div>
 
 		<div class="clear"></div>
@@ -58,6 +65,7 @@
 				}
 				$('.float span').css(style)
 				$('.float span .bg').css(style)
+				$('.share').css(style)
 				swipt('b1', function() {
 					$('#b2').animate({
 						'margin-left': (0 - width) + 'px'
@@ -80,6 +88,18 @@
 					$('#b3').animate({
 						'margin-left': '0px'
 					}, animateTime)
+				})
+				swipt('b4', function() {
+				}, function() {
+					$('#b4').animate({
+						'margin-left': '0px'
+					}, animateTime)
+				})
+				$('#btn-share').click(function() {
+					$('.share').show()
+				})
+				$('.share').click(function() {
+					$('.share').hide()
 				})
 			})
 		</script>
